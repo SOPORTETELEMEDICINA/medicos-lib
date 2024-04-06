@@ -28,6 +28,7 @@ public class MedicoPageView  implements Serializable {
 	private String IdUsuarioZoom;
 	private Integer idUnidadMedica;
 	private Boolean descripcionPuesto;
+	private String idCatClues;
 
 	@Override
 	public String toString() {
@@ -40,8 +41,7 @@ public class MedicoPageView  implements Serializable {
 				", userName='" + userName + '\'' +
 				", especialidades='" + especialidades + '\'' +
 				", IdUsuarioZoom='" + IdUsuarioZoom + '\'' +
-				", idUnidadMedica='" + idUnidadMedica + '\'' +
-				", descripcionPuesto='" + descripcionPuesto + '\'' +
+				", idCatClues='" + idCatClues + '\'' +
 				'}';
 	}
 }
