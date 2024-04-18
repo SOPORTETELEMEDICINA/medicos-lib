@@ -27,19 +27,19 @@ public class MedicoView implements Serializable {
    @ApiModelProperty(value = "El ID es un UUID", allowEmptyValue = true, example = "60acd6be-3089-41b1-a616-16059270a456")
    private String idMedico;
 
-   @ApiModelProperty(required = true, allowableValues = "range[1,100]")
-   @Size(max = 50, min = 2, message = "Máximo 50 caracteres, mínimo 2")
+   @ApiModelProperty(required = true, allowEmptyValue = false, allowableValues = "range[1,100]")
+   @Size(max = 100, message = "Máximo 100 caracteres")
    @NotEmpty(message = "No puede ser nulo o vacío")
    private String nombre;
 
-   @ApiModelProperty(required = true, allowableValues = "range[1,100]")
-   @Size(max = 50, min = 2, message = "Máximo 50 caracteres, mínimo 2")
+   @ApiModelProperty(required = true, allowEmptyValue = false, allowableValues = "range[1,100]")
+   @Size(max = 100, message = "Máximo 100 caracteres")
    @NotEmpty(message = "No puede ser nulo o vacío")
    private String apellidoPaterno;
 
-   @ApiModelProperty(required = true, allowableValues = "range[1,100]")
-   @Size(max = 50, message = "Máximo 50 caracteres")
-   /*@NotEmpty(message = "No puede ser nulo o vacío")*/
+   @ApiModelProperty(required = true, allowEmptyValue = false, allowableValues = "range[1,100]")
+   @Size(max = 100, message = "Máximo 100 caracteres")
+   @NotEmpty(message = "No puede ser nulo o vacío")
    private String apellidoMaterno;
 
    @ApiModelProperty(required = true, dataType = "java.util.Date", example = "197650800")
@@ -159,13 +159,6 @@ public class MedicoView implements Serializable {
    private Collection<DomicilioView> domicilioViewList = new ArrayList<>();
    private Collection<EspecialidadView> especialidadViewList = new ArrayList<>();
 
-   @ApiModelProperty(required = true)
-   @NotNull(message = "No puede ser nulo o vacío")
-   private Integer idPais;
-
-   @ApiModelProperty(required = true)
-   @NotNull(message = "No puede ser nulo o vacío")
-   private Integer idTipoPersonal;
 
    @Override
    public String toString() {
