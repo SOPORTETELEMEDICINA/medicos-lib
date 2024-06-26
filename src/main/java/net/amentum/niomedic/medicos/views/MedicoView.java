@@ -155,6 +155,10 @@ public class MedicoView implements Serializable {
    private String idUsuarioZoom;
    private Integer idUnidadMedica;
 
+   private Integer id_medico_firma;
+
+   private MedicoFirmaView medicoFirma;
+
    //   las relaciones
    private Collection<DomicilioView> domicilioViewList = new ArrayList<>();
    private Collection<EspecialidadView> especialidadViewList = new ArrayList<>();
@@ -163,36 +167,38 @@ public class MedicoView implements Serializable {
    @Override
    public String toString() {
       return "Medico {" +
-         "idMedico=" + idMedico +
-         ", nombre=" + nombre +
-         ", apellidoPaterno=" + apellidoPaterno +
-         ", apellidoMaterno=" + apellidoMaterno +
-         ", fechaNacimiento=" + fechaNacimiento +
-         ", lugarNacimiento=" + lugarNacimiento +
-         ", estadoCivil=" + estadoCivil +
-         ", sexo=" + sexo +
-         ", curp=" + curp +
-         ", rfc=" + rfc +
-         ", email=" + email +
-         ", telefonoFijo=" + telefonoFijo +
-         ", telefonoMovil=" + telefonoMovil +
-         ", id_cat_nacionalidades=" + id_cat_nacionalidades +
-         ", id_cat_entidades=" + id_cat_entidades +
-         ", id_institucion=" + id_institucion +
-         ", per_id=" + per_id +
-         ", act_id=" + act_id +
-         ", atr_id=" + atr_id +
-         ", id_cat_clues=" + id_cat_clues +
-         ", jor_id=" + jor_id +
-         ", id_cat_especialidades=" + id_cat_especialidades +
-         ", con_id=" + con_id +
-         ", pla_id=" + pla_id +
-         ", idUsuario=" + idUsuario +
-         ", activo=" + activo +
-         ", userName=" + userName +
-         ", fechaCreacion=" + fechaCreacion +
-         ", idUsuarioZoom=" + idUsuarioZoom +
-         ", idUnidadMedica=" + idUnidadMedica +
+              "idMedico=" + idMedico +
+              ", nombre=" + nombre +
+              ", apellidoPaterno=" + apellidoPaterno +
+              ", apellidoMaterno=" + apellidoMaterno +
+              ", fechaNacimiento=" + fechaNacimiento +
+              ", lugarNacimiento=" + lugarNacimiento +
+              ", estadoCivil=" + estadoCivil +
+              ", sexo=" + sexo +
+              ", curp=" + curp +
+              ", rfc=" + rfc +
+              ", email=" + email +
+              ", telefonoFijo=" + telefonoFijo +
+              ", telefonoMovil=" + telefonoMovil +
+              ", id_cat_nacionalidades=" + id_cat_nacionalidades +
+              ", id_cat_entidades=" + id_cat_entidades +
+              ", id_institucion=" + id_institucion +
+              ", per_id=" + per_id +
+              ", act_id=" + act_id +
+              ", atr_id=" + atr_id +
+              ", id_cat_clues=" + id_cat_clues +
+              ", jor_id=" + jor_id +
+              ", id_cat_especialidades=" + id_cat_especialidades +
+              ", con_id=" + con_id +
+              ", pla_id=" + pla_id +
+              ", id_medico_firma=" + id_medico_firma +
+              ", medico_firma=" + medicoFirma +
+              ", idUsuario=" + idUsuario +
+              ", activo=" + activo +
+              ", userName=" + userName +
+              ", fechaCreacion=" + fechaCreacion +
+              ", idUsuarioZoom=" + idUsuarioZoom +
+              ", idUnidadMedica=" + idUnidadMedica +
               ", descripcionPuesto=" + descripcionPuesto +
 
               "}";
